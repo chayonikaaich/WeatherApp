@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Dashboard</title>
+    <link rel="shortcut icon" href="img/bg.jpg" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+    <header class="dashboard-header">
+        <form class="search-section" onsubmit="return false;">
+            <input type="text" id="input-box" class="input-box" placeholder="Mumbai">
+            <button id="search-btn" class="search-btn"><i class="fas fa-search"></i> Search</button>
+        </form>
+        <button class="unit-toggle-btn" id="unit-toggle-btn">°C / °F</button>
+        <button class="location-btn" id="location-btn"><i class="fas fa-map-marker-alt"></i> Current Location</button>
+    </header>
+    <main class="dashboard-main">
+        <section class="main-weather-card">
+            <div class="city-time">
+                <h2 id="city">City</h2>
+                <div class="weather-icon" id="main-weather-icon"></div>
+                <div class="clock-date">
+                    <span id="clock">00:00:00</span>
+                    <span id="date">01/01/1970</span>
+                </div>
+            </div>
+            <div class="weather-details">
+                <div class="temperature" id="temperature">0°C</div>
+                <div class="feels-like">Feels like: <span id="feels-like">0°C</span></div>
+                <div class="sun-times">
+                    <span>Sunrise: <span id="sunrise">--:--</span></span>
+                    <span>Sunset: <span id="sunset">--:--</span></span>
+                </div>
+                <div class="weather-desc" id="weather-desc">Description</div>
+                <div class="weather-stats">
+                    <span><i class="fas fa-tint"></i> <span id="humidity">--</span>%</span>
+                    <span><i class="fas fa-wind"></i> <span id="wind">--</span> km/h</span>
+                    <span><i class="fas fa-tachometer-alt"></i> <span id="pressure">--</span> hPa</span>
+                    <span><i class="fas fa-sun"></i> <span id="uv">--</span> UV</span>
+                </div>
+            </div>
+        </section>
+        <section class="forecast-section">
+            <div class="forecast-card five-day">
+                <h3>5 Days Forecast:</h3>
+                <div class="forecast-list" id="five-day-forecast">
+                    <!-- 5-day forecast items here -->
+                </div>
+            </div>
+            <div class="forecast-card hourly">
+                <h3>Hourly Forecast</h3>
+                <div class="forecast-list" id="hourly-forecast">
+                    <!-- Hourly forecast items here -->
+                </div>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    <!-- sweetalert cdn........ -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+</body>
+
+</html>
